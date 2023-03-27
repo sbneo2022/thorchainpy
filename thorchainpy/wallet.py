@@ -10,13 +10,13 @@ from ecdsa.util import sigencode_string_canonize
 from mnemonic import Mnemonic
 from thorchain_proto.proto.cosmos.crypto.secp256k1.keys_pb2 import PubKey as PubKeyProto
 
-BECH32_PUBKEY_ACC_PREFIX = "thorpub"
-BECH32_PUBKEY_VAL_PREFIX = "thorvaloperpub"
-BECH32_PUBKEY_CONS_PREFIX = "thorvalconspub"
+BECH32_PUBKEY_ACC_PREFIX = "cosmospub"
+BECH32_PUBKEY_VAL_PREFIX = "cosmosvaloperpub"
+BECH32_PUBKEY_CONS_PREFIX = "cosmosvalconspub"
 
-BECH32_ADDR_ACC_PREFIX = "thor"
-BECH32_ADDR_VAL_PREFIX = "thorvaloper"
-BECH32_ADDR_CONS_PREFIX = "thorvalcons"
+BECH32_ADDR_ACC_PREFIX = "cosmos"
+BECH32_ADDR_VAL_PREFIX = "cosmosvaloper"
+BECH32_ADDR_CONS_PREFIX = "cosmosvalcons"
 
 DEFAULT_DERIVATION_PATH = "m/44'/118'/0'/0/0"
 
