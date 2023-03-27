@@ -1,0 +1,1 @@
+# thorchain_proto/proto/cosmos/base/snapshots/v1beta1

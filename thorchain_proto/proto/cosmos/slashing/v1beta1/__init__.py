@@ -1,0 +1,1 @@
+# thorchain_proto/proto/cosmos/slashing/v1beta1

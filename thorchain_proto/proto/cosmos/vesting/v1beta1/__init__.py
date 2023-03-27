@@ -1,0 +1,1 @@
+# thorchain_proto/proto/cosmos/vesting/v1beta1
