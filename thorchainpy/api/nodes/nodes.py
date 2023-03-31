@@ -88,8 +88,6 @@ def sync_detailed(
         **kwargs,
     )
 
-    print(response.text)
-
     return _build_response(client=client, response=response)
 
 

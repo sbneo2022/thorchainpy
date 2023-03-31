@@ -35,7 +35,6 @@ class NodeNodeBondProvidersNodeBondProvider:
 
     @classmethod
     def from_dict(cls: Type[T], src_dict: Dict[str, Any]) -> T:
-        
         d = src_dict.copy()
         bond_address = d.pop("bond_address", UNSET)
 

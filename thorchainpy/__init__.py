@@ -1,6 +1,7 @@
-from thorchain_api_client import (
-    api,
-    models,
-    Client,
-    AuthenticatedClient,
+""" A client library for accessing Thornode API """
+from .client import AuthenticatedClient, Client
+
+__all__ = (
+    "AuthenticatedClient",
+    "Client",
 )

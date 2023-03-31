@@ -46,12 +46,8 @@ class NodeNodeBondProviders:
         d = src_dict.copy()
         node_operator_fee = d.pop("node_operator_fee", UNSET)
 
-        print(d["providers"])
         _providers = d.pop("providers", UNSET)
         providers: Union[Unset, NodeNodeBondProvidersNodeBondProvider]
-        
-        print(_providers)
-        
         if isinstance(_providers, Unset):
             providers = UNSET
         else:

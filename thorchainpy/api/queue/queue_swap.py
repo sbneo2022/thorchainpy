@@ -90,8 +90,6 @@ def sync_detailed(
         **kwargs,
     )
 
-    print(dir(response))
-
     return _build_response(client=client, response=response)
 
 

@@ -4,7 +4,6 @@ version = "0.0.6"
 description = "Thorchain Python SDK"
 packages = [
     { include = "thorchainpy" },
-    { include = "thorchain_api_client" },
 ]
 authors = ["sbneo2022"]
 license = "MIT"

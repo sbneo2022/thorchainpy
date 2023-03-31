@@ -6,7 +6,6 @@ class NodeStatus(str, Enum):
     DISABLED = "Disabled"
     STANDBY = "Standby"
     WHITELISTED = "Whitelisted"
-    UNKOWN = "Unknown"
 
     def __str__(self) -> str:
         return str(self.value)

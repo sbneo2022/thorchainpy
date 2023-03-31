@@ -3,7 +3,7 @@
 set -e pipefail
 
 clean() {
-  rm -rf ./thornode/ ./thornode-api-client/
+  rm -rf ./thornode/ ./thorchainpy/ ./thornode-api-client/
 }
 
 gen_openapi_client() {
@@ -12,7 +12,7 @@ gen_openapi_client() {
   openapi-python-client generate --path thornode/openapi/openapi.yaml
 
   rm -rf thorchain_api_client
-  mv ./thornode-api-client/thornode_api_client/ ./thorchain_api_client/
+  mv ./thornode-api-client/thornode_api_client/ ./thorchainpy/
 }
 
 # ------------------------------------------------

@@ -1,6 +1,8 @@
-from typing import Any, Dict, List, Type, TypeVar
+from typing import Any, Dict, List, Type, TypeVar, Union
 
 import attr
+
+from ..types import UNSET, Unset
 
 T = TypeVar("T", bound="NetworkResponse")
 
@@ -16,6 +18,9 @@ class NetworkResponse:
         total_reserve (str): total reserve RUNE Example: 21999180112172346.
         vaults_migrating (bool): Returns true if there exist RetiringVaults which have not finished migrating funds to
             new ActiveVaults
+        gas_spent_rune (str): Sum of the gas the network has spent to send outbounds Example: 1000000000.
+        gas_withheld_rune (str): Sum of the gas withheld from users to cover outbound gas Example: 1500000000.
+        outbound_fee_multiplier (Union[Unset, str]): Current outbound fee multiplier, in basis points Example: 15000.
     """
 
     bond_reward_rune: str
@@ -24,6 +29,9 @@ class NetworkResponse:
     total_bond_units: str
     total_reserve: str
     vaults_migrating: bool
+    gas_spent_rune: str
+    gas_withheld_rune: str
+    outbound_fee_multiplier: Union[Unset, str] = UNSET
     additional_properties: Dict[str, Any] = attr.ib(init=False, factory=dict)
 
     def to_dict(self) -> Dict[str, Any]:
@@ -33,6 +41,9 @@ class NetworkResponse:
         total_bond_units = self.total_bond_units
         total_reserve = self.total_reserve
         vaults_migrating = self.vaults_migrating
+        gas_spent_rune = self.gas_spent_rune
+        gas_withheld_rune = self.gas_withheld_rune
+        outbound_fee_multiplier = self.outbound_fee_multiplier
 
         field_dict: Dict[str, Any] = {}
         field_dict.update(self.additional_properties)
@@ -44,8 +55,12 @@ class NetworkResponse:
                 "total_bond_units": total_bond_units,
                 "total_reserve": total_reserve,
                 "vaults_migrating": vaults_migrating,
+                "gas_spent_rune": gas_spent_rune,
+                "gas_withheld_rune": gas_withheld_rune,
             }
         )
+        if outbound_fee_multiplier is not UNSET:
+            field_dict["outbound_fee_multiplier"] = outbound_fee_multiplier
 
         return field_dict
 
@@ -64,6 +79,12 @@ class NetworkResponse:
 
         vaults_migrating = d.pop("vaults_migrating")
 
+        gas_spent_rune = d.pop("gas_spent_rune")
+
+        gas_withheld_rune = d.pop("gas_withheld_rune")
+
+        outbound_fee_multiplier = d.pop("outbound_fee_multiplier", UNSET)
+
         network_response = cls(
             bond_reward_rune=bond_reward_rune,
             burned_bep_2_rune=burned_bep_2_rune,
@@ -71,6 +92,9 @@ class NetworkResponse:
             total_bond_units=total_bond_units,
             total_reserve=total_reserve,
             vaults_migrating=vaults_migrating,
+            gas_spent_rune=gas_spent_rune,
+            gas_withheld_rune=gas_withheld_rune,
+            outbound_fee_multiplier=outbound_fee_multiplier,
         )
 
         network_response.additional_properties = d
