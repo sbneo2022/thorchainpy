@@ -1,1 +1,0 @@
-# thorchain_proto/proto/cosmos/authz/v1beta1

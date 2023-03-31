@@ -4,30 +4,16 @@ version = "0.0.6"
 description = "Thorchain Python SDK"
 packages = [
     { include = "thorchainpy" },
-    { include = "thorchain_proto" },
+    { include = "thorchain_api_client" },
 ]
 authors = ["sbneo2022"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = "3.11.2"
-grpcio = "1.51.1"
-grpcio-tools = "1.51.1"
-protobuf = "4.21.12"
-types-protobuf = "4.21.0.2"
-mypy-protobuf = "3.4.0"
-bech32 = "1.2.0"
-asyncio = "3.4.3"
-protobuf-init = "0.3.0"
-requests = "2.28.2"
-bip32 = "3.4"
-ecdsa = "0.18.0"
-mnemonic = "0.20"
-importlib = "1.0.4"
-setuptools = "^67.6.0"
-ripemd-hash = "^1.0.0"
 
 [tool.poetry.dev-dependencies]
+openapi-python-client = "0.13.3"
 black = "22.6.0"
 pytest = "7.1.2"
 
@@ -46,6 +32,6 @@ target-version = ['py311']
 extend-exclude = '''
 ^/(
     \.vscode
-  | thorchain_proto
+  | thorchain_api_client
 )$
 '''

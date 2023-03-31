@@ -1,1 +1,0 @@
-# thorchain_proto/proto/cosmos/genutil

@@ -1,2 +1,2 @@
-proto-gen:
-	./scripts/proto-gen.sh
+gen:
+	./scripts/gen.sh
