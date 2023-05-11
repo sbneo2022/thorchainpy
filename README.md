@@ -13,7 +13,7 @@
 [docs-badge]: https://img.shields.io/badge/docs-passing-green.svg
 [docs-url]: https://docs.thorchain.org/
 [discord-badge]: https://dcbadge.vercel.app/api/server/kvZhpEtHAw?style=flat
-[discord-url]: https://discord.gg/kvZhpEtHAw
+[discord-url]: https://discord.com/invite/c4EhDZdFMA
 [pypi-image]: https://img.shields.io/pypi/v/thorchainpy
 [pypi-url]: https://pypi.org/project/thorchainpy/
 [license-badge]: https://img.shields.io/badge/License-MIT-blue.svg
